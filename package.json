@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "electron-packager . quantuMon --platform=darwin --arch=x64 --version=0.26.0 --ignore=node_modules/electron --icon=www/img/menubar_logo.icns",
+    "build": "electron-packager . quantuMon --platform=darwin --arch=x64 --version=0.26.0 --ignore=.release --icon=www/img/menubar_logo.icns",
     "start": "./node_modules/.bin/electron ."
   },
   "dependencies": {
