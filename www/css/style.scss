@@ -1,0 +1,194 @@
+/*style.scss*/
+
+body, *{
+  box-sizing: border-box;
+}
+
+
+$colPrim500: #3F51B5;
+$colPrim400: #5C6BC0;
+
+$colSec500: #F44336;
+$colSec100: #FFCDD2;
+
+$font_size: 14px;
+$grey: #eee;
+$grey_dark: #bbb;
+
+#mainContainer{
+  // width: 550px;
+  // height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  // border-style: solid;
+  // border-width: 1px;
+  // border-color: black;
+
+  //background-color: $grey;
+
+}
+
+
+#mainContainer{
+
+  .card {
+    display: inline-block;
+    vertical-align: top;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    color: #272727;
+
+    border-top-width: 3px;
+    border-top-color: $grey;
+    border-top-style: solid;
+
+    background: #FFF;
+
+    // box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    // border-radius: 2px;
+
+    font-size: 0px;
+  }
+
+  .card:nth-of-type(1){
+    border-top-style: none;
+  }
+
+
+
+  .card .title {
+    line-height: 48px;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .card .content {
+    font-size: $font_size;
+    padding: 20px 20px 0px 20px;
+    font-weight: 300;
+    //border-radius: 0 0 2px 2px;
+    width: 400px;
+    display: inline-block;
+  }
+  .card .content-right{
+    font-size: $font_size;
+    width: 100px;
+    display: inline-block;
+
+    //background-color: $colPrim400;
+    border-left-width: 1px;
+    border-left-color: $grey;
+    border-left-style: solid;
+
+    position: absolute;
+    height: 100%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .card p {
+    margin: 0;
+  }
+
+  .card-chart{
+    height: 100px;
+    margin-top: 20px;
+    margin-left: -30px;
+
+    > svg{
+      .ct-series > path.ct-line{
+        stroke-width:1px;
+        //stroke-opacity: 1;
+      }
+    }
+  }
+
+  // .cpu-card .card-chart{
+  //   height: 200px;
+  // }
+
+  .card-chart.memory-line{
+    > svg{
+
+      .ct-series > path.ct-area{
+        fill: $colSec100;
+        fill-opacity: 1;
+      }
+      .ct-series > path.ct-line{
+        stroke: $colSec500;
+      }
+    }
+  }
+
+
+  .memory-pie{
+    width:200px;
+
+    > svg{
+      margin-top: 30px;
+      margin-left: -100px;
+
+      .ct-series-a > path.ct-slice-donut{
+        stroke: $colSec500;
+      }
+      .ct-series-b > path.ct-slice-donut{
+        stroke: $colSec100;
+      }
+
+    }
+  }
+
+
+  .cpu-row{
+
+    margin: 10px 0px 5px 10px;
+    cursor: pointer;
+    .cpu-col-data{
+      width: 40px;
+      display: inline-block;
+
+      >span{
+        display: block;
+      }
+
+      .core-name{
+        font-size: 9px;
+        font-weight: bold;
+      }
+      .core-data{
+        font-size: 8px;
+
+      }
+    }
+
+    .cpu-col-chart{
+      width: 30px;
+      display: inline-block;
+      svg{
+        .ct-series-a > path.ct-slice-donut{
+          stroke: $colSec500;
+        }
+        .ct-series-b > path.ct-slice-donut{
+          stroke: $colSec100;
+        }
+        // margin-left: auto;
+        // margin-right: auto;
+
+      }
+    }
+
+  }
+
+
+}
+
+footer{
+  font-size: small;
+  color: $grey_dark;
+}
+
+#mainContainer{
+
+}

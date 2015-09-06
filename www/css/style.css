@@ -1,0 +1,92 @@
+/*style.scss*/
+body, * {
+  box-sizing: border-box; }
+
+#mainContainer {
+  margin-left: auto;
+  margin-right: auto; }
+
+#mainContainer .card {
+  display: inline-block;
+  vertical-align: top;
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+  color: #272727;
+  border-top-width: 3px;
+  border-top-color: #eee;
+  border-top-style: solid;
+  background: #FFF;
+  font-size: 0px; }
+#mainContainer .card:nth-of-type(1) {
+  border-top-style: none; }
+#mainContainer .card .title {
+  line-height: 48px;
+  font-size: 24px;
+  font-weight: 300; }
+#mainContainer .card .content {
+  font-size: 14px;
+  padding: 20px 20px 0px 20px;
+  font-weight: 300;
+  width: 400px;
+  display: inline-block; }
+#mainContainer .card .content-right {
+  font-size: 14px;
+  width: 100px;
+  display: inline-block;
+  border-left-width: 1px;
+  border-left-color: #eee;
+  border-left-style: solid;
+  position: absolute;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden; }
+#mainContainer .card p {
+  margin: 0; }
+#mainContainer .card-chart {
+  height: 100px;
+  margin-top: 20px;
+  margin-left: -30px; }
+  #mainContainer .card-chart > svg .ct-series > path.ct-line {
+    stroke-width: 1px; }
+#mainContainer .card-chart.memory-line > svg .ct-series > path.ct-area {
+  fill: #FFCDD2;
+  fill-opacity: 1; }
+#mainContainer .card-chart.memory-line > svg .ct-series > path.ct-line {
+  stroke: #F44336; }
+#mainContainer .memory-pie {
+  width: 200px; }
+  #mainContainer .memory-pie > svg {
+    margin-top: 30px;
+    margin-left: -100px; }
+    #mainContainer .memory-pie > svg .ct-series-a > path.ct-slice-donut {
+      stroke: #F44336; }
+    #mainContainer .memory-pie > svg .ct-series-b > path.ct-slice-donut {
+      stroke: #FFCDD2; }
+#mainContainer .cpu-row {
+  margin: 10px 0px 5px 10px;
+  cursor: pointer; }
+  #mainContainer .cpu-row .cpu-col-data {
+    width: 40px;
+    display: inline-block; }
+    #mainContainer .cpu-row .cpu-col-data > span {
+      display: block; }
+    #mainContainer .cpu-row .cpu-col-data .core-name {
+      font-size: 9px;
+      font-weight: bold; }
+    #mainContainer .cpu-row .cpu-col-data .core-data {
+      font-size: 8px; }
+  #mainContainer .cpu-row .cpu-col-chart {
+    width: 30px;
+    display: inline-block; }
+    #mainContainer .cpu-row .cpu-col-chart svg .ct-series-a > path.ct-slice-donut {
+      stroke: #F44336; }
+    #mainContainer .cpu-row .cpu-col-chart svg .ct-series-b > path.ct-slice-donut {
+      stroke: #FFCDD2; }
+
+footer {
+  font-size: small;
+  color: #bbb; }
+
+/*# sourceMappingURL=style.css.map */
