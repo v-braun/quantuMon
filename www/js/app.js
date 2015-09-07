@@ -108,7 +108,7 @@ function ViewData(){
   function updateViewModel(viewModel, data){
     viewModel.memory.total = data.memory.total / 1000;
     viewModel.memory.free = data.memory.free / 1000;
-    viewModel.memory.pieData.series = [data.memory.percent, 100 - data.memory.percent];
+    viewModel.memory.pieData.series = [100 - data.memory.percent, data.memory.percent];
 
     viewModel.memory.lineData.labels.push(0);
     if(viewModel.memory.lineData.labels.length > RAM_LINE_MAX){
